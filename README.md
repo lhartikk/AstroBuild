@@ -4,7 +4,7 @@ Deploy  based on the planet alignments.
 
 
 ##Example
-Example usage when integrated to [capistrano](https://github.com/capistrano/capistrano)
+Example usage when integrated to [capistrano](https://github.com/capistrano/capistrano):
 
     > cap production deploy
     
