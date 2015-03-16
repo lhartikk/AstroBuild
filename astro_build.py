@@ -164,7 +164,6 @@ def check_alignments(alignments):
             sys.stdout.write('Cthulhu has risen\n')
     sys.stdout.write('NO PLANETS ALIGNED\n')
 
-
 def main():
 
     now = datetime.datetime.utcnow()
