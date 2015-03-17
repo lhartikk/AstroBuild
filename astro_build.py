@@ -162,6 +162,7 @@ def check_alignments(alignments):
             sys.exit(1)
         elif len(planets) == len(alignments):
             sys.stdout.write('Cthulhu has risen\n')
+            return
     sys.stdout.write('NO PLANETS ALIGNED\n')
 
 def main():
