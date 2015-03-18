@@ -154,7 +154,7 @@ def calc_geocentric_alignments(planet_name, d):
 def check_alignments(alignments):
 
     for degree, grouped in itertools.groupby(alignments,  lambda x: x[1]):
-        planets = map(lambda x: x[0], grouped)
+        planets = [x[0] for x in grouped]
         if len(planets) > 1:
             sys.stderr.write("BUILD FAILED" + '\n')
             sys.stderr.write("PLANETS ALIGNED: " + str(planets)+'\n')
@@ -171,10 +171,10 @@ def main():
 
     planet_names = ['Sun', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 
-    alignments = map(lambda x: [x, round(calc_geocentric_alignments(x, d))], planet_names)
+    alignments = [[x, round(calc_geocentric_alignments(x, d))] for x in planet_names]
     alignments.sort(key= lambda x: x[1])
 
     check_alignments(alignments)
 
-
-main()
+if __name__ == "__main__":
+    main()
