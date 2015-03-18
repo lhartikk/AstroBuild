@@ -176,5 +176,5 @@ def main():
 
     check_alignments(alignments)
 
-
-main()
+if __name__ == "__main__":
+    main()
