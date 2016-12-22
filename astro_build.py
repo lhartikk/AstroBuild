@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import math, itertools, sys, datetime
 
 
