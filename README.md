@@ -1,9 +1,9 @@
-#AstroBuild
+# AstroBuild
 Deploy  based on the planet alignments. 
 
 
 
-##Example
+## Example
 Example usage when integrated to [capistrano](https://github.com/capistrano/capistrano):
 
     > cap production deploy
@@ -17,7 +17,7 @@ Example usage when integrated to [capistrano](https://github.com/capistrano/capi
     cap aborted!
     
 
-##Technical specs
+## Technical specs
 
 Calculates the geocentric apparent
 longitude in degrees of each planet (+ sun) and rounds to the nearest integer. If any of the planets align, an error message is written to stderr.
@@ -29,5 +29,5 @@ Inspired by:
 Visual: [Current Geocentric and Heliocentric
 Planetary Positions](http://www.planetary-aspects.com/curr_asp/curr_posns.php)
 
-##How to use?
+## How to use?
 Since AstroBuild is just a simple python script you can integrate it to your favourite deploy/CI workflow e.g. as a prebuild task!
