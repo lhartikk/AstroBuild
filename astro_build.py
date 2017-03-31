@@ -156,14 +156,15 @@ def check_alignments(alignments):
 
     for degree, grouped in itertools.groupby(alignments,  lambda x: x[1]):
         planets = map(lambda x: x[0], grouped)
-        if len(planets) > 1:
+        if len(planets) > 1 and len(planets) != len(alignments):
             sys.stderr.write("BUILD FAILED" + '\n')
             sys.stderr.write("PLANETS ALIGNED: " + str(planets)+'\n')
             sys.stderr.write("ALIGNMENT: " + str(int(degree)) +' degrees\n') 
             sys.exit(1)
-            
+        elif len(planets) == len(alignments):
+            sys.stdout.write('Cthulhu has risen\n')
+            return
     sys.stdout.write('NO PLANETS ALIGNED\n')
-
 
 def main():
 
